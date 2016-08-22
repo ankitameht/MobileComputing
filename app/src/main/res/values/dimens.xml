@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_main_ques_text">24dp</dimen>
-    <dimen name="activity_main_ques_text_padding">30dp</dimen>
+    <dimen name="activity_main_ques_text_padding">10dp</dimen>
     <dimen name="activity_main_number">48dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
 </resources>

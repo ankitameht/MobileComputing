@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0e494e</color>
-    <color name="colorPrimaryDark">#0e494e</color>
+    <color name="colorPrimary">#0E494E</color>
+    <color name="colorPrimaryDark">#0E494E</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="activity_main_background">#66cdaa</color>
+    <color name="activity_main_background">#66CDAA</color>
     <color name="activity_main_ques_text_color">#FFFFFF</color>
-    <color name="activity_main_number_color">#0e494e</color>
+    <color name="activity_main_number_color">#0E494E</color>
+    <color name="button_color">#CCFFCC</color>
 </resources>

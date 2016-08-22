@@ -15,4 +15,4 @@ This repository is for assignment 1 - Prime Number Maths Quiz
 
 #Evaluation description:
 - Please find the necessary code with in the root of this repository.
-- You will find apks in '/app/build/outputs/apk' directory
+- You will find apk in '/app/build/outputs/apk' directory

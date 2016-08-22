@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTV;
 
     /*Other Variables*/
-    public String mNum;
+    private String mNum;
     /* static text variables*/
     private static final String TAG = "Math_Quiz";
-    static final String STATE_NUM = "Random_Number";
+    private static final String STATE_NUM = "Random_Number";
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
     private GoogleApiClient client;
 
     /* This sets the random number on screen using text view */
-    public void setTheView(String randn) {
-        Log.d(TAG, "Inside settheView");
+    public void setTheView(String rand_n) {
+        Log.d(TAG, "Inside setTheView");
         mTV = (TextView) findViewById(R.id.numberToSet);
-        mTV.setText(randn);
+        mTV.setText(rand_n);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             setTheView(mNum);
         }
 
-        //Button functionalities
+        //Button Functionality
         mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
