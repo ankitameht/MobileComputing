@@ -1,6 +1,7 @@
 package in.innovatehub.ankita_mehta.primemathsquiz;
 
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,12 +21,16 @@ public class MainActivity extends AppCompatActivity {
     private Button mFalseButton;
     private Button mNextButton;
     private TextView mTV;
+    private TextView mTimer;
+    private TextView mLevel;
 
     /*Other Variables*/
     private String mNum;
+    private static Integer mScore = 0;
     /* static text variables*/
     private static final String TAG = "Math_Quiz";
     private static final String STATE_NUM = "Random_Number";
+    private static final String STATE_SCORE = "Score";
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -39,23 +44,53 @@ public class MainActivity extends AppCompatActivity {
         mTV = (TextView) findViewById(R.id.numberToSet);
         mTV.setText(rand_n);
     }
+    public void setTheLevel(Integer level){
+        Log.d(TAG, "Inside setTheLevel");
+        mLevel = (TextView) findViewById(R.id.level);
+        mLevel.setText("You are at Level: "+level.toString());
+    }
+
+    public CountDownTimer setTheTimer(){
+        Log.d(TAG, "Inside Set the timer");
+        mTimer = (TextView) findViewById(R.id.timer);
+        CountDownTimer c = new CountDownTimer(30000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                mTimer.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                mTimer.setText("done!");
+            }
+        };
+        c.start();
+        return c;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         Log.d(TAG, "Inside onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final CountDownTimer[] c = new CountDownTimer[1];
         // Check whether we're recreating a previously destroyed instance
         if (savedInstanceState != null) {
             // Restore value of members from saved state
             //mCurrentScore = savedInstanceState.getInt(STATE_SCORE);
             mNum = savedInstanceState.getString(STATE_NUM);
+            mScore = savedInstanceState.getInt(STATE_SCORE);
             setTheView(mNum);
+            setTheLevel(mScore);
+            c[0] = setTheTimer();
+
         } else {
             // Probably initialize members with default values for a new instance
             //Set number as new question
             mNum = (new QuestionBank()).numberToSet();
+            mScore = 0;
             setTheView(mNum);
+            setTheLevel(mScore);
+            c[0] = setTheTimer();
         }
 
         //Button Functionality
@@ -66,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 if((new QuestionBank().isPrime(mNum))) {
                     Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
                     toast.show();
+                    mScore++;
                 }else{
                     Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
                     toast.show();
@@ -83,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
                     toast.show();
+                    mScore++;
                 }
             }
         });
@@ -91,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mNum = (new QuestionBank()).numberToSet();
                 setTheView(mNum);
+                setTheLevel(mScore);
+                c[0].cancel();
+                c[0] = setTheTimer();
             }
         });
     }
@@ -100,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         // Save the user's current game state
         //savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
         savedInstanceState.putString(STATE_NUM, mNum);
+        savedInstanceState.putInt(STATE_SCORE, mScore);
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }

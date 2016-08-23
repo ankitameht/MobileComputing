@@ -3,58 +3,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/background"
-    android:scrollbarAlwaysDrawVerticalTrack="true">
+    android:gravity="center_vertical"
+    android:background="@drawable/background">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:textSize="@dimen/activity_main_ques_text"
-            android:text="@string/question_text"
-            android:textColor="@color/activity_main_ques_text_color"
-            tools:ignore="SpUsage" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/numberToSet"
-            android:textSize="@dimen/activity_main_number"
-            android:textColor="@color/activity_main_number_color"
-            android:text="@string/numberToSet"
-            android:layout_gravity="center"
-            android:padding="@dimen/activity_main_ques_text_padding"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/true_button"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/button_color"
-            android:layout_marginRight="@dimen/button_margin"
-            android:text="@string/true_button"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Level_Label"
+            android:gravity="left"
+            android:id="@+id/level" />
 
-        <Button
-            android:id="@+id/false_button"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/button_color"
-            android:text="@string/false_button"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Level_Label"
+            android:gravity="right"
+            android:id="@+id/timer" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/button_color"
-        android:layout_marginTop="@dimen/button_margin"
-        android:text="@string/next_button"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="@dimen/activity_main_ques_text"
+                android:text="@string/question_text"
+                android:textColor="@color/activity_main_ques_text_color"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberToSet"
+                android:textSize="@dimen/activity_main_number"
+                android:textColor="@color/activity_main_number_color"
+                android:text="@string/numberToSet"
+                android:padding="@dimen/activity_main_ques_text_padding"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/true_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/button_color"
+                android:layout_marginRight="@dimen/button_margin"
+                android:text="@string/true_button"/>
+
+            <Button
+                android:id="@+id/false_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/button_color"
+                android:text="@string/false_button"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/button_color"
+            android:layout_marginTop="@dimen/button_margin"
+            android:text="@string/next_button"/>
+    </LinearLayout>
 
 </LinearLayout>
