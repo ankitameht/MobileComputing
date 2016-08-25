@@ -5,6 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="activity_main_background">#66CDAA</color>
     <color name="activity_main_ques_text_color">#FFFFFF</color>
-    <color name="activity_main_number_color">#0E494E</color>
+    <color name="activity_main_number_color">#FFFFFF</color>
     <color name="button_color">#CCFFCC</color>
 </resources>

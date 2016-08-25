@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Level_Label"
+            android:gravity="left"
+            android:id="@+id/level"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/Level_Label"
+            android:gravity="right"
+            android:id="@+id/timer"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="@dimen/activity_main_ques_text"
+            android:text="@string/question_text"
+            android:textColor="@color/activity_main_ques_text_color"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberToSet"
+            android:textSize="@dimen/activity_main_number"
+            android:textColor="@color/activity_main_number_color"
+            android:text="@string/numberToSet"
+            android:padding="@dimen/activity_main_ques_text_padding"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/true_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/button_margin"
+                android:src="@drawable/image_true"
+                android:background="@null"
+                />
+
+            <ImageButton
+                android:id="@+id/false_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_false"
+                android:background="@null"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/button_menu_padding">
+
+            <ImageButton
+                android:id="@+id/hintButton"
+                android:src="@drawable/image_hint"
+                android:scaleType="fitCenter"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClick="giveHint"
+                />
+            <ImageButton
+                android:id="@+id/cheatButton"
+                android:src="@drawable/image_cheat"
+                android:scaleType="fitCenter"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClick="giveCheat"
+                />
+            <ImageButton
+                android:id="@+id/next_button"
+                android:src="@drawable/image_next"
+                android:scaleType="fitCenter"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

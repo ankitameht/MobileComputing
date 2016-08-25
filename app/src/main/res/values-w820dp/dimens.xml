@@ -7,4 +7,5 @@
     <dimen name="activity_main_ques_text_padding">10dp</dimen>
     <dimen name="activity_main_number">48dp</dimen>
     <dimen name="button_margin">16dp</dimen>
+    <dimen name="button_menu_padding">25dp</dimen>
 </resources>

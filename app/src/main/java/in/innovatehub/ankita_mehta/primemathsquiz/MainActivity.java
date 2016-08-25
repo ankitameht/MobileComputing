@@ -1,5 +1,6 @@
 package in.innovatehub.ankita_mehta.primemathsquiz;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,9 +20,9 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     /*Member variable specific to UI components*/
-    private Button mTrueButton;
-    private Button mFalseButton;
-    private Button mNextButton;
+    private ImageButton mTrueButton;
+    private ImageButton mFalseButton;
+    private ImageButton mNextButton;
     private TextView mTV;
     private TextView mTimer;
     private TextView mLevel;
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Math_Quiz";
     private static final String STATE_NUM = "Random_Number";
     private static final String STATE_SCORE = "Score";
+    public final static String EXTRA_MESSAGE = "primemathsquiz.MainActivity.MESSAGE";
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -94,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Button Functionality
-        mTrueButton = (Button) findViewById(R.id.true_button);
+        mTrueButton = (ImageButton) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mFalseButton = (Button) findViewById(R.id.false_button);
+        mFalseButton = (ImageButton) findViewById(R.id.false_button);
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        mNextButton = (Button) findViewById(R.id.next_button);
+        mNextButton = (ImageButton) findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mNum = (new QuestionBank()).numberToSet();
@@ -152,5 +157,25 @@ public class MainActivity extends AppCompatActivity {
         // Restore state members from saved instance
         //savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
         savedInstanceState.putString(STATE_NUM, mNum);
+    }
+
+    /** Called when the user clicks the Hint button */
+    public void giveHint(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, HintActivity.class);
+        TextView numToSet = (TextView) findViewById(R.id.numberToSet);
+        String message = numToSet.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    /** Called when the user clicks the Hint button */
+    public void giveCheat(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, CheatActivity.class);
+        TextView numToSet = (TextView) findViewById(R.id.numberToSet);
+        String message = numToSet.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }

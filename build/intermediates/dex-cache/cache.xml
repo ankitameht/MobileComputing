@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="597bf71ae250bc4c8f2a8736e44b3d00f82bf2ec">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_75f56757415cdbc820d8c26c5f1c84866e37e665/classes.dex" />
+    </item>
+
+</items>

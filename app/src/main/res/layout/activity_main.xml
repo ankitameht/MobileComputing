@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_vertical"
     android:background="@drawable/background">
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|center"
         android:orientation="horizontal"
         >
         <TextView
+            android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/Level_Label"
-            android:gravity="left"
-            android:id="@+id/level" />
+            android:id="@+id/level"
+            android:textColor="#FFFFFF"/>
 
         <TextView
+            android:layout_gravity="right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/Level_Label"
-            android:gravity="right"
-            android:id="@+id/timer" />
-
+            android:id="@+id/timer"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
         <TextView
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true"
@@ -49,6 +49,7 @@
                 tools:ignore="SpUsage" />
 
             <TextView
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/numberToSet"
@@ -60,32 +61,69 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/true_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/button_color"
                 android:layout_marginRight="@dimen/button_margin"
-                android:text="@string/true_button"/>
+                android:src="@drawable/image_true"
+                android:background="@null"
+               />
 
-            <Button
+            <ImageButton
                 android:id="@+id/false_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/button_color"
-                android:text="@string/false_button"/>
+                android:src="@drawable/image_false"
+                android:background="@null"
+                />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/next_button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/button_color"
-            android:layout_marginTop="@dimen/button_margin"
-            android:text="@string/next_button"/>
+            android:gravity="center|top"
+            android:orientation="horizontal"
+            android:padding="@dimen/button_menu_padding">
+
+            <ImageButton
+                android:id="@+id/hintButton"
+                android:src="@drawable/image_hint"
+                android:scaleType="fitCenter"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClick="giveHint"
+                />
+            <ImageButton
+                android:id="@+id/cheatButton"
+                android:src="@drawable/image_cheat"
+                android:scaleType="fitCenter"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClick="giveCheat"
+                 />
+            <ImageButton
+                android:id="@+id/next_button"
+                android:src="@drawable/image_next"
+                android:scaleType="fitCenter"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
