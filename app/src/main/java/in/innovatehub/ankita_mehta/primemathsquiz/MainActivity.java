@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mTrueButton;
     private ImageButton mFalseButton;
     private ImageButton mNextButton;
+    private ImageButton mHintButton;
+    private ImageButton mCheatButton;
     private TextView mTV;
     private TextView mTimer;
     private TextView mLevel;
@@ -35,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String STATE_NUM = "Random_Number";
     private static final String STATE_SCORE = "Score";
     public final static String EXTRA_MESSAGE = "primemathsquiz.MainActivity.MESSAGE";
-
+    private static final int REQUEST_CODE_CHEAT = 1;
+    private boolean mRecievedCheat;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -61,15 +64,41 @@ public class MainActivity extends AppCompatActivity {
         CountDownTimer c = new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                mTimer.setText("seconds remaining: " + millisUntilFinished / 1000);
+                mTimer.setText("  Time Left!! " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
-                mTimer.setText("done!");
+                mTimer.setText("Times Up :(");
+                mTrueButton.setEnabled(false);
+                mFalseButton.setEnabled(false);
+                Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
+                toast.show();
             }
         };
         c.start();
         return c;
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.d(TAG, "Inside On stop");
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(TAG, "Inside On Resume");
+        Log.d(TAG, "Did user cheat?"+mRecievedCheat);
+    }
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG, "Inside On Destroy");
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG, "Inside On Pause");
     }
 
     @Override
@@ -111,6 +140,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
                     toast.show();
                 }
+                setTheLevel(mScore);
+                mTrueButton.setEnabled(false);
+                mFalseButton.setEnabled(false);
+               // Toast toast = Toast.makeText(MainActivity.this, R.string.already_answered, Toast.LENGTH_SHORT);
+               // toast.show();
             }
         });
 
@@ -126,18 +160,58 @@ public class MainActivity extends AppCompatActivity {
                     toast.show();
                     mScore++;
                 }
+                setTheLevel(mScore);
+                mTrueButton.setEnabled(false);
+                mFalseButton.setEnabled(false);
+               // Toast toast = Toast.makeText(MainActivity.this, R.string.already_answered, Toast.LENGTH_SHORT);
+               // toast.show();
             }
         });
+
         mNextButton = (ImageButton) findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mNum = (new QuestionBank()).numberToSet();
                 setTheView(mNum);
-                setTheLevel(mScore);
                 c[0].cancel();
                 c[0] = setTheTimer();
+                mTrueButton.setEnabled(true);
+                mFalseButton.setEnabled(true);
             }
         });
+/*
+        mHintButton = (ImageButton) findViewById(R.id.hintButton);
+        mHintButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Log.d(TAG, "Hint Pressed");
+                Intent intent = HintActivity.newIntent(MainActivity.this,mNum);
+                startActivityForResult(intent,REQUEST_CODE_HINT);
+
+            }
+        });
+*/
+        mCheatButton = (ImageButton)findViewById(R.id.cheatButton);
+        mCheatButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Cheat Pressed");
+                //Intent i = new Intent(MainActivity.this, CheatActivity.class);
+                Intent i = CheatActivity.newIntent(MainActivity.this, mNum);
+                startActivity(i);
+                startActivityForResult(i,REQUEST_CODE_CHEAT);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == REQUEST_CODE_CHEAT){
+            if(data ==  null){
+                return;
+            }
+            mRecievedCheat = CheatActivity.wasCheatShown(data);
+        }
     }
 
     @Override

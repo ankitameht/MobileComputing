@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Level_Label">Level</string>
+    <string name="Show_Hint">Show me the Hint</string>
+    <string name="time_finish">What can I say? :( Time waits for none! Try another question by clicking Next.</string>
+    <string name="already_answered">You have already answered this! Try Next!</string>
 </resources>

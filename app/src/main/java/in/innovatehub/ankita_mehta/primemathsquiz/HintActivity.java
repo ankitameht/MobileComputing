@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class HintActivity extends AppCompatActivity {
 
     ArrayList<Integer> primeFact = new ArrayList<Integer>();
-
+    private final String TAG = "Inside Hint Activity";
 
     // A function to print all prime factors of a given number n
     void primeFactors(int n)
@@ -71,6 +72,28 @@ public class HintActivity extends AppCompatActivity {
 
         //getActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.d(TAG, "Inside On stop");
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(TAG, "Inside On Resume");
+    }
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG, "Inside On Destroy");
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG, "Inside On Pause");
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

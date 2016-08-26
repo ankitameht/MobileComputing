@@ -7,4 +7,8 @@
     <dimen name="activity_main_number">48dp</dimen>
     <dimen name="button_margin">16dp</dimen>
     <dimen name="button_menu_padding">25dp</dimen>
+    <dimen name="overall_padding">40dp</dimen>
+    <dimen name="overall_padding_land">20dp</dimen>
+    <dimen name="activity_main_number_land">40dp</dimen>
+    <dimen name="activity_main_ques_text_land">25dp</dimen>
 </resources>
