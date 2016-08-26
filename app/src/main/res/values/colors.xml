@@ -7,4 +7,5 @@
     <color name="activity_main_ques_text_color">#FFFFFF</color>
     <color name="activity_main_number_color">#FFFFFF</color>
     <color name="button_color">#CCFFCC</color>
+    <color name="red">#FF0000</color>
 </resources>

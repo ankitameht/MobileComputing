@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -21,31 +22,21 @@ public class HintActivity extends AppCompatActivity {
     // A function to print all prime factors of a given number n
     void primeFactors(int n)
     {
-        // Print the number of 2s that divide n
         while (n%2 == 0)
         {
             primeFact.add(2);
-            //printf("%d ", 2);
             n = n/2;
         }
-
-        // n must be odd at this point.  So we can skip one element (Note i = i +2)
         for (int i = 3; i <= Math.sqrt(n); i = i+2)
         {
-            // While i divides n, print i and divide n
             while (n%i == 0)
             {
                 primeFact.add(i);
-                //printf("%d ", i);
                 n = n/i;
             }
         }
-
-        // This condition is to handle the case whien n is a prime number
-        // greater than 2
         if (n > 2)
             primeFact.add(n);
-            //printf ("%d ", n);
     }
 
     @Override
@@ -69,6 +60,9 @@ public class HintActivity extends AppCompatActivity {
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_hint);
         layout.addView(textView);
+
+        Toast toast = Toast.makeText(HintActivity.this, R.string.hint_toast, Toast.LENGTH_SHORT);
+        toast.show();
 
         //getActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -99,9 +93,7 @@ public class HintActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // app icon in action bar clicked; go home
                 Intent intent = new Intent(this, MainActivity.class);
-                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
             default:

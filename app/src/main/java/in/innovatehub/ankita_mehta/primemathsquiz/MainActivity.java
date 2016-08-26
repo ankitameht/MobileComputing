@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     /*Other Variables*/
     private String mNum;
     private static Integer mScore = 0;
+    private static boolean mTimerOver;
     /* static text variables*/
     private static final String TAG = "Math_Quiz";
     private static final String STATE_NUM = "Random_Number";
@@ -65,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
 
             public void onTick(long millisUntilFinished) {
                 mTimer.setText("  Time Left!! " + millisUntilFinished / 1000);
+                mTimerOver = false;
             }
 
             public void onFinish() {
                 mTimer.setText("Times Up :(");
                 mTrueButton.setEnabled(false);
                 mFalseButton.setEnabled(false);
-                Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
-                toast.show();
+                mTimerOver = true;
             }
         };
         c.start();
@@ -109,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
         final CountDownTimer[] c = new CountDownTimer[1];
         // Check whether we're recreating a previously destroyed instance
         if (savedInstanceState != null) {
-            // Restore value of members from saved state
-            //mCurrentScore = savedInstanceState.getInt(STATE_SCORE);
             mNum = savedInstanceState.getString(STATE_NUM);
             mScore = savedInstanceState.getInt(STATE_SCORE);
             setTheView(mNum);
@@ -118,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
             c[0] = setTheTimer();
 
         } else {
-            // Probably initialize members with default values for a new instance
             //Set number as new question
             mNum = (new QuestionBank()).numberToSet();
             mScore = 0;
@@ -127,24 +125,31 @@ public class MainActivity extends AppCompatActivity {
             c[0] = setTheTimer();
         }
 
+
         //Button Functionality
         mTrueButton = (ImageButton) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((new QuestionBank().isPrime(mNum))) {
-                    Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
+                if(mTimerOver){
+                    Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
-                    mScore++;
-                }else{
-                    Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
+                }else if(mRecievedCheat){
+                    Toast toast = Toast.makeText(MainActivity.this, R.string.cheat_result, Toast.LENGTH_SHORT);
                     toast.show();
+                }else {
+                    if ((new QuestionBank().isPrime(mNum))) {
+                        Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
+                        toast.show();
+                        mScore++;
+                    } else {
+                        Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
                 }
                 setTheLevel(mScore);
                 mTrueButton.setEnabled(false);
                 mFalseButton.setEnabled(false);
-               // Toast toast = Toast.makeText(MainActivity.this, R.string.already_answered, Toast.LENGTH_SHORT);
-               // toast.show();
             }
         });
 
@@ -152,19 +157,26 @@ public class MainActivity extends AppCompatActivity {
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((new QuestionBank().isPrime(mNum))) {
-                    Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
+                if(mTimerOver){
+                    Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
-                }else{
-                    Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
+                }else if(mRecievedCheat){
+                    Toast toast = Toast.makeText(MainActivity.this, R.string.cheat_result, Toast.LENGTH_SHORT);
                     toast.show();
-                    mScore++;
+                }else {
+                    if ((new QuestionBank().isPrime(mNum))) {
+
+                        Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT);
+                        toast.show();
+                    } else {
+                        Toast toast = Toast.makeText(MainActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT);
+                        toast.show();
+                        mScore++;
+                    }
                 }
                 setTheLevel(mScore);
                 mTrueButton.setEnabled(false);
                 mFalseButton.setEnabled(false);
-               // Toast toast = Toast.makeText(MainActivity.this, R.string.already_answered, Toast.LENGTH_SHORT);
-               // toast.show();
             }
         });
 
@@ -175,29 +187,19 @@ public class MainActivity extends AppCompatActivity {
                 setTheView(mNum);
                 c[0].cancel();
                 c[0] = setTheTimer();
+                mRecievedCheat = false;
                 mTrueButton.setEnabled(true);
                 mFalseButton.setEnabled(true);
             }
         });
-/*
-        mHintButton = (ImageButton) findViewById(R.id.hintButton);
-        mHintButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Log.d(TAG, "Hint Pressed");
-                Intent intent = HintActivity.newIntent(MainActivity.this,mNum);
-                startActivityForResult(intent,REQUEST_CODE_HINT);
 
-            }
-        });
-*/
         mCheatButton = (ImageButton)findViewById(R.id.cheatButton);
         mCheatButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Log.d(TAG, "Cheat Pressed");
-                //Intent i = new Intent(MainActivity.this, CheatActivity.class);
-                Intent i = CheatActivity.newIntent(MainActivity.this, mNum);
-                startActivity(i);
+                boolean b =  (new QuestionBank().isPrime(mNum));
+                Intent i = CheatActivity.newIntent(MainActivity.this, b);
                 startActivityForResult(i,REQUEST_CODE_CHEAT);
             }
         });
@@ -217,19 +219,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the user's current game state
-        //savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
         savedInstanceState.putString(STATE_NUM, mNum);
         savedInstanceState.putInt(STATE_SCORE, mScore);
-        // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
 
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        // Always call the superclass so it can restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
-
         // Restore state members from saved instance
-        //savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
+        savedInstanceState.putInt(STATE_SCORE, mScore);
         savedInstanceState.putString(STATE_NUM, mNum);
     }
 
@@ -243,13 +241,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /** Called when the user clicks the Hint button */
-    public void giveCheat(View view) {
-        // Do something in response to button
-        Intent intent = new Intent(this, CheatActivity.class);
-        TextView numToSet = (TextView) findViewById(R.id.numberToSet);
-        String message = numToSet.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }
 }

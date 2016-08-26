@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class CheatActivity extends AppCompatActivity {
@@ -15,7 +16,11 @@ public class CheatActivity extends AppCompatActivity {
     private final String TAG = "Inside Cheat Activity";
     public final static String EXTRA_MESSAGE = "primemathsquiz.CheatActivity.Number";
     public final static String IS_CHEATED = "primemathsquiz.CheatActivity.IsCheated";
+    private final static String ANSWER_IS_TRUE = "primemathsquiz.CheatActivity.Answer";
     private boolean isCheated = false;
+
+    private TextView mCheatAnswerTV;
+    private Button mShowCheatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +28,23 @@ public class CheatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cheat);
 
         Log.d(TAG,"Inside OnCreate");
-        String s = getIntent().getStringExtra(EXTRA_MESSAGE);
-        Log.d(TAG, "Recieved:"+s);
-        if(Integer.parseInt(s)>=0) {
-            isCheated = true;
-        }
-        setAnswerResult(isCheated);
-        /*
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
+        isCheated = getIntent().getBooleanExtra(ANSWER_IS_TRUE,false);
+        Log.d(TAG, "Recieved: "+isCheated);
 
-        boolean val = (new QuestionBank()).isPrime(message);
-        textView.setTextColor(Color.RED);
-        textView.setText("Ah! could not solve "+message+": Click "+val);
+        mCheatAnswerTV = (TextView) findViewById(R.id.cheat_answer_tv);
+        mShowCheatButton = (Button) findViewById(R.id.show_cheat);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_cheat);
-        layout.addView(textView);
-        */
+        mShowCheatButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(isCheated){
+                    mCheatAnswerTV.setText(R.string.true_button);
+                }else{
+                    mCheatAnswerTV.setText(R.string.false_button);
+                }
+                setAnswerResult(true);
+            }
+        });
     }
 
     private void setAnswerResult(boolean b){
@@ -71,9 +74,9 @@ public class CheatActivity extends AppCompatActivity {
         Log.d(TAG, "Inside On Pause");
     }
 
-    public static Intent newIntent(Context context, String mNum){
+    public static Intent newIntent(Context context, boolean b){
         Intent intent = new Intent(context, CheatActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, mNum);
+        intent.putExtra(ANSWER_IS_TRUE, b);
         return intent;
     }
 

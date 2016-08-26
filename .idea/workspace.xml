@@ -5,6 +5,11 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.DayNight.Dialog</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hint.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -23,35 +28,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe98fe4-2c79-49b8-bea3-117dccbbd11a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_land.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hint.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hint.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-small/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-small/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-small/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-small/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-small/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-small/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="PrimeMathsQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,10 +93,14 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
               <folding>
-                <element signature="e#2459#2460#0" expanded="true" />
-                <element signature="e#2518#2519#0" expanded="true" />
+                <element signature="e#1357#1715#0" expanded="true" />
+                <element signature="e#1522#1542#0" expanded="true" />
+                <element signature="e#1611#1632#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+                <element signature="e#2655#2656#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,18 +109,25 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6985294">
-              <caret line="217" column="64" selection-start-line="217" selection-start-column="64" selection-end-line="217" selection-end-column="64" />
+            <state vertical-scroll-proportion="-5.630027">
+              <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
               <folding>
-                <element signature="e#2608#2628#0" expanded="true" />
-                <element signature="e#4662#4684#0" expanded="true" />
-                <element signature="e#4862#4886#0" expanded="true" />
-                <element signature="e#5597#5621#0" expanded="true" />
-                <element signature="e#5769#5791#0" expanded="true" />
-                <element signature="e#6308#6657#0" expanded="true" />
-                <element signature="e#6656#6657#0" expanded="true" />
-                <element signature="e#7166#7579#0" expanded="true" />
-                <element signature="e#7578#7579#0" expanded="true" />
+                <element signature="e#4206#5323#0" expanded="true" />
+                <element signature="e#4402#4422#0" expanded="true" />
+                <element signature="e#4589#4610#0" expanded="true" />
+                <element signature="e#4825#4847#0" expanded="true" />
+                <element signature="e#5043#5067#0" expanded="true" />
+                <element signature="e#5322#5323#0" expanded="true" />
+                <element signature="e#5437#6555#0" expanded="true" />
+                <element signature="e#5633#5653#0" expanded="true" />
+                <element signature="e#5820#5841#0" expanded="true" />
+                <element signature="e#6057#6081#0" expanded="true" />
+                <element signature="e#6243#6265#0" expanded="true" />
+                <element signature="e#6554#6555#0" expanded="true" />
+                <element signature="e#6666#7055#0" expanded="true" />
+                <element signature="e#7054#7055#0" expanded="true" />
+                <element signature="e#7167#7527#0" expanded="true" />
+                <element signature="e#7526#7527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +147,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding />
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding>
+                <element signature="e#1897#1916#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,10 +186,14 @@
       <file leaf-file-name="activity_cheat.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.54717">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            <state vertical-scroll-proportion="-2.45283">
+              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
-                <element signature="e#487#520#0" expanded="true" />
+                <element signature="e#485#518#0" expanded="true" />
+                <element signature="e#772#807#0" expanded="true" />
+                <element signature="e#860#888#0" expanded="true" />
+                <element signature="e#1065#1100#0" expanded="true" />
+                <element signature="e#1290#1310#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1871,14 +1885,14 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/QuestionBank.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_hint.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/MainActivity.java" />
       </list>
     </option>
@@ -2089,7 +2103,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="cd707624" />
+    <property name="device.picker.selection" value="Nexus_6P_API_23" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -2376,7 +2390,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="815" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2384,17 +2398,17 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42632332" sideWeight="0.5200286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42632332" sideWeight="0.47997138" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42632332" sideWeight="0.52288985" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42632332" sideWeight="0.47711015" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3762518" sideWeight="0.48855507" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3762518" sideWeight="0.481402" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24606581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="548" y="94" width="344" height="681" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24606581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="548" y="94" width="344" height="681" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2475,8 +2489,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
           <folding>
-            <element signature="e#2459#2460#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#1357#1715#0" expanded="true" />
+            <element signature="e#1522#1542#0" expanded="true" />
+            <element signature="e#1611#1632#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2486,15 +2504,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="85" />
           <folding>
-            <element signature="e#2608#2628#0" expanded="true" />
-            <element signature="e#4662#4684#0" expanded="true" />
-            <element signature="e#4862#4886#0" expanded="true" />
-            <element signature="e#5597#5621#0" expanded="true" />
-            <element signature="e#5769#5791#0" expanded="true" />
-            <element signature="e#6308#6657#0" expanded="true" />
-            <element signature="e#6656#6657#0" expanded="true" />
-            <element signature="e#7166#7579#0" expanded="true" />
-            <element signature="e#7578#7579#0" expanded="true" />
+            <element signature="e#4206#5323#0" expanded="true" />
+            <element signature="e#4402#4422#0" expanded="true" />
+            <element signature="e#4589#4610#0" expanded="true" />
+            <element signature="e#4825#4847#0" expanded="true" />
+            <element signature="e#5043#5067#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5437#6555#0" expanded="true" />
+            <element signature="e#5633#5653#0" expanded="true" />
+            <element signature="e#5820#5841#0" expanded="true" />
+            <element signature="e#6057#6081#0" expanded="true" />
+            <element signature="e#6243#6265#0" expanded="true" />
+            <element signature="e#6554#6555#0" expanded="true" />
+            <element signature="e#6666#7055#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7167#7527#0" expanded="true" />
+            <element signature="e#7526#7527#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2554,15 +2579,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2608#2628#0" expanded="true" />
-            <element signature="e#4662#4684#0" expanded="true" />
-            <element signature="e#4862#4886#0" expanded="true" />
-            <element signature="e#5597#5621#0" expanded="true" />
-            <element signature="e#5769#5791#0" expanded="true" />
-            <element signature="e#6308#6657#0" expanded="true" />
-            <element signature="e#6656#6657#0" expanded="true" />
-            <element signature="e#7166#7579#0" expanded="true" />
-            <element signature="e#7578#7579#0" expanded="true" />
+            <element signature="e#4206#5323#0" expanded="true" />
+            <element signature="e#4402#4422#0" expanded="true" />
+            <element signature="e#4589#4610#0" expanded="true" />
+            <element signature="e#4825#4847#0" expanded="true" />
+            <element signature="e#5043#5067#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5437#6555#0" expanded="true" />
+            <element signature="e#5633#5653#0" expanded="true" />
+            <element signature="e#5820#5841#0" expanded="true" />
+            <element signature="e#6057#6081#0" expanded="true" />
+            <element signature="e#6243#6265#0" expanded="true" />
+            <element signature="e#6554#6555#0" expanded="true" />
+            <element signature="e#6666#7055#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7167#7527#0" expanded="true" />
+            <element signature="e#7526#7527#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2606,15 +2638,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="26" selection-end-column="50" />
           <folding>
-            <element signature="e#2608#2628#0" expanded="true" />
-            <element signature="e#4662#4684#0" expanded="true" />
-            <element signature="e#4862#4886#0" expanded="true" />
-            <element signature="e#5597#5621#0" expanded="true" />
-            <element signature="e#5769#5791#0" expanded="true" />
-            <element signature="e#6308#6657#0" expanded="true" />
-            <element signature="e#6656#6657#0" expanded="true" />
-            <element signature="e#7166#7579#0" expanded="true" />
-            <element signature="e#7578#7579#0" expanded="true" />
+            <element signature="e#4206#5323#0" expanded="true" />
+            <element signature="e#4402#4422#0" expanded="true" />
+            <element signature="e#4589#4610#0" expanded="true" />
+            <element signature="e#4825#4847#0" expanded="true" />
+            <element signature="e#5043#5067#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5437#6555#0" expanded="true" />
+            <element signature="e#5633#5653#0" expanded="true" />
+            <element signature="e#5820#5841#0" expanded="true" />
+            <element signature="e#6057#6081#0" expanded="true" />
+            <element signature="e#6243#6265#0" expanded="true" />
+            <element signature="e#6554#6555#0" expanded="true" />
+            <element signature="e#6666#7055#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7167#7527#0" expanded="true" />
+            <element signature="e#7526#7527#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2715,30 +2754,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.54717">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding>
-            <element signature="e#487#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding>
-            <element signature="e#2459#2460#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hint.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6792452">
@@ -2763,11 +2778,45 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cheat.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.45283">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="e#485#518#0" expanded="true" />
+            <element signature="e#772#807#0" expanded="true" />
+            <element signature="e#860#888#0" expanded="true" />
+            <element signature="e#1065#1100#0" expanded="true" />
+            <element signature="e#1290#1310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/CheatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+          <folding>
+            <element signature="e#1357#1715#0" expanded="true" />
+            <element signature="e#1522#1542#0" expanded="true" />
+            <element signature="e#1611#1632#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/HintActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding>
+            <element signature="e#1897#1916#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2781,18 +2830,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/in/innovatehub/ankita_mehta/primemathsquiz/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6985294">
-          <caret line="217" column="64" selection-start-line="217" selection-start-column="64" selection-end-line="217" selection-end-column="64" />
+        <state vertical-scroll-proportion="-5.630027">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
-            <element signature="e#2608#2628#0" expanded="true" />
-            <element signature="e#4662#4684#0" expanded="true" />
-            <element signature="e#4862#4886#0" expanded="true" />
-            <element signature="e#5597#5621#0" expanded="true" />
-            <element signature="e#5769#5791#0" expanded="true" />
-            <element signature="e#6308#6657#0" expanded="true" />
-            <element signature="e#6656#6657#0" expanded="true" />
-            <element signature="e#7166#7579#0" expanded="true" />
-            <element signature="e#7578#7579#0" expanded="true" />
+            <element signature="e#4206#5323#0" expanded="true" />
+            <element signature="e#4402#4422#0" expanded="true" />
+            <element signature="e#4589#4610#0" expanded="true" />
+            <element signature="e#4825#4847#0" expanded="true" />
+            <element signature="e#5043#5067#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5437#6555#0" expanded="true" />
+            <element signature="e#5633#5653#0" expanded="true" />
+            <element signature="e#5820#5841#0" expanded="true" />
+            <element signature="e#6057#6081#0" expanded="true" />
+            <element signature="e#6243#6265#0" expanded="true" />
+            <element signature="e#6554#6555#0" expanded="true" />
+            <element signature="e#6666#7055#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7167#7527#0" expanded="true" />
+            <element signature="e#7526#7527#0" expanded="true" />
           </folding>
         </state>
       </provider>
