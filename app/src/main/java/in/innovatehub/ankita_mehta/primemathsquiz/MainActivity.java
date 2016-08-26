@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                mTimer.setText("Times Up :(");
-                mTrueButton.setEnabled(false);
-                mFalseButton.setEnabled(false);
+                mTimer.setText("  Times Up :(");
+                //mTrueButton.setEnabled(false);
+                //mFalseButton.setEnabled(false);
                 mTimerOver = true;
             }
         };

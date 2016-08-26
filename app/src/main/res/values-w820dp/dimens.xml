@@ -12,4 +12,5 @@
     <dimen name="overall_padding_land">20dp</dimen>
     <dimen name="activity_main_number_land">40dp</dimen>
     <dimen name="activity_main_ques_text_land">25dp</dimen>
+    <dimen name="button_menu_padding_land">10dp</dimen>
 </resources>

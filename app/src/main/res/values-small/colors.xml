@@ -2,4 +2,5 @@
 <resources>
     <color name="button_color">#CCFFCC</color>
     <color name="red">#FF0000</color>
+    <color name="cheat_answer_tv_color">#FFFFFF</color>
 </resources>

@@ -24,8 +24,10 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".HintActivity"
+            android:label="@string/my_hint_dialog_activity_title"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
         <activity android:name=".CheatActivity"
+            android:label="@string/my_cheat_dialog_activity_title"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog"></activity>
     </application>
 
