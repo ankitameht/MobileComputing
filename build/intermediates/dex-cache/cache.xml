@@ -1,2 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_32fdcecbbf07cd5cd55b131b92269eb14727eaf7.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.0_659d02edb1f06ce7b9ecd58cc15dc727fce5bd94.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_a5858e538b6558aba5d3b6c301b53f9740fa44c0.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.0_c59270b16b6eb6f64a6f6d20349f81a755e4f88b.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_3873653384d680dd01b961b9fef8536158465561.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.0_941ca7648f5a06fe8d4e815d452f3beb905452bf.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.1.0_7a4a0aa2d6ef07cb8cc6adfb5a10c58434639d6f.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.0_1f8a726d5bd443d006fec28fdc1e2edca27894e0.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.0_db849e99599f64938689bd7608888680422e5923.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.0_c19913f8e268a3fc577df38a617a8e44e26a08a6.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_574818a0bd884182f0f0e94005dfdb4c7326176d.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.0_b3779b94225fd7b8fdebbc6edad4c4060b5a0094.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_1f55bfee311a0f991604939ac4be1de91f1f7bd7.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.0_ac4bc21e794d255272d544442ee1c04353520281.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.0_ee66194275f186549758490b3f7a28899593d424.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_f54652c9f59ad2a16ca4d419095441cb69c058b6.jar" />
+    </item>
+    <item
+        jar="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/ankita_mehta/Downloads/neDir/AndroidDevelopment/PrimeMathsQuiz/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.0_dc532d475341ae06c30699f765dca2566e9683ae.jar" />
+    </item>
+
+</items>
