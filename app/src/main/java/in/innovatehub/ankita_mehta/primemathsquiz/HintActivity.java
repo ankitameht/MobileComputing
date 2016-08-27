@@ -82,13 +82,13 @@ public class HintActivity extends AppCompatActivity {
             public void onClick(View v){
                 Log.d(TAG, "Hint Pressed");
                 if(isTookHint) {
-                    mHintAnswerTV.setTextSize(40);
+                   // mHintAnswerTV.setTextSize(40);
                     //mHintAnswerTV.setTextColor(Color.BLUE);
                     mHintAnswerTV.setText("\n\nThe prime factors for " + message + " are: " + s + "1");
                     mHintAnswerTV.setFreezesText(true);
                     //layout.addView(textView);
                 }else{
-                    mHintAnswerTV.setTextSize(40);
+                   // mHintAnswerTV.setTextSize(40);
                     Integer num = Integer.parseInt(message);
                     primeFactors(num);
                     for (int i = 0; i < primeFact.size(); i++) {

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     /*Other Variables*/
     private String mNum;
     private static Integer mScore = 0;
-    private static boolean mTimerOver;
+    private static boolean mIsTimerOver = false;
     /* static text variables*/
     private static final String TAG = "Math_Quiz";
     private static final String STATE_NUM = "Random_Number";
@@ -60,14 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
             public void onTick(long millisUntilFinished) {
                 mTimer.setText("  Time Left!! " + millisUntilFinished / 1000);
-                mTimerOver = false;
+                mIsTimerOver = false;
             }
 
             public void onFinish() {
                 mTimer.setText("  Times Up :(");
                 //mTrueButton.setEnabled(false);
                 //mFalseButton.setEnabled(false);
-                mTimerOver = true;
+                mIsTimerOver = true;
             }
         };
         c.start();
@@ -125,10 +125,11 @@ public class MainActivity extends AppCompatActivity {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mTimerOver){
+                if(mIsTimerOver){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
-                }else if(mReceivedCheat){
+                }
+                else if(mReceivedCheat){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.cheat_result, Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mTimerOver){
+                if(mIsTimerOver){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
                 }else if(mReceivedCheat){
@@ -184,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 mReceivedCheat = false;
                 mTrueButton.setEnabled(true);
                 mFalseButton.setEnabled(true);
+                mIsTimerOver = false;
             }
         });
 
