@@ -28,7 +28,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
         <activity android:name=".CheatActivity"
             android:label="@string/my_cheat_dialog_activity_title"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
     </application>
 
 </manifest>

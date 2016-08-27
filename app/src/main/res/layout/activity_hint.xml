@@ -9,5 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/activity_hint"
     tools:context="in.innovatehub.ankita_mehta.primemathsquiz.HintActivity">
-
+    <TextView
+        android:id="@+id/hint_answer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/accent_material_light"
+        android:padding="@dimen/activity_horizontal_margin"
+        tools:text="Answer"/>
+    <Button
+        android:id="@+id/show_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Show_Hint"/>
 </RelativeLayout>

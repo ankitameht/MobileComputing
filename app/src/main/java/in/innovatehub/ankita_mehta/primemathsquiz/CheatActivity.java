@@ -2,19 +2,20 @@ package in.innovatehub.ankita_mehta.primemathsquiz;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Button;
 import android.widget.TextView;
 
 public class CheatActivity extends AppCompatActivity {
 
+    private static final String STATE_CHEATED = "primemathsquiz.CheatActivity.cheatState";
     private final String TAG = "Inside Cheat Activity";
-    public final static String EXTRA_MESSAGE = "primemathsquiz.CheatActivity.Number";
+    private final static String EXTRA_MESSAGE = "primemathsquiz.CheatActivity.Number";
     public final static String IS_CHEATED = "primemathsquiz.CheatActivity.IsCheated";
     private final static String ANSWER_IS_TRUE = "primemathsquiz.CheatActivity.Answer";
     private boolean isCheated = false;
@@ -26,10 +27,16 @@ public class CheatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cheat);
+        if (savedInstanceState != null) {
+            isCheated = savedInstanceState.getBoolean(STATE_CHEATED);
+        } else {
+            //Set number as new question
+            isCheated = false;
+        }
 
         Log.d(TAG,"Inside OnCreate");
         isCheated = getIntent().getBooleanExtra(ANSWER_IS_TRUE,false);
-        Log.d(TAG, "Recieved: "+isCheated);
+        Log.d(TAG, "Received: "+isCheated);
 
         mCheatAnswerTV = (TextView) findViewById(R.id.cheat_answer_tv);
         mShowCheatButton = (Button) findViewById(R.id.show_cheat);
@@ -39,8 +46,10 @@ public class CheatActivity extends AppCompatActivity {
             public void onClick(View v){
                 if(isCheated){
                     mCheatAnswerTV.setText(R.string.true_button);
+                    mCheatAnswerTV.setFreezesText(true);
                 }else{
                     mCheatAnswerTV.setText(R.string.false_button);
+                    mCheatAnswerTV.setFreezesText(true);
                 }
                 setAnswerResult(true);
             }
@@ -80,16 +89,22 @@ public class CheatActivity extends AppCompatActivity {
         return intent;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putBoolean(STATE_CHEATED, isCheated);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore state members from saved instance
+        savedInstanceState.putBoolean(STATE_CHEATED, isCheated);
+        //savedInstanceState.putString(STATE_NUM, mNum);
+    }
+
     public static boolean wasCheatShown(Intent i){
         return i.getBooleanExtra(IS_CHEATED, false);
     }
 
-    public void sentCheat(View view) {
-        // Do something in response to button
-        Intent intent = new Intent(this, MainActivity.class);
-        TextView numToSet = (TextView) findViewById(R.id.numberToSet);
-        String message = numToSet.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }
 }

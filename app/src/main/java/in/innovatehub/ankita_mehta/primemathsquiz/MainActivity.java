@@ -1,21 +1,16 @@
 package in.innovatehub.ankita_mehta.primemathsquiz;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mTrueButton;
     private ImageButton mFalseButton;
     private ImageButton mNextButton;
-    private ImageButton mHintButton;
     private ImageButton mCheatButton;
     private TextView mTV;
     private TextView mTimer;
@@ -39,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String STATE_SCORE = "Score";
     public final static String EXTRA_MESSAGE = "primemathsquiz.MainActivity.MESSAGE";
     private static final int REQUEST_CODE_CHEAT = 1;
-    private boolean mRecievedCheat;
+    private boolean mReceivedCheat;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -48,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private GoogleApiClient client;
 
     /* This sets the random number on screen using text view */
-    public void setTheView(String rand_n) {
+    private void setTheView(String rand_n) {
         Log.d(TAG, "Inside setTheView");
         mTV = (TextView) findViewById(R.id.numberToSet);
         mTV.setText(rand_n);
@@ -59,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         mLevel.setText("You are at Level: "+level.toString());
     }
 
-    public CountDownTimer setTheTimer(){
+    private CountDownTimer setTheTimer(){
         Log.d(TAG, "Inside Set the timer");
         mTimer = (TextView) findViewById(R.id.timer);
         CountDownTimer c = new CountDownTimer(30000, 1000) {
@@ -89,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         Log.d(TAG, "Inside On Resume");
-        Log.d(TAG, "Did user cheat?"+mRecievedCheat);
+        Log.d(TAG, "Did user cheat?"+ mReceivedCheat);
     }
     @Override
     public void onDestroy(){
@@ -134,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 if(mTimerOver){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
-                }else if(mRecievedCheat){
+                }else if(mReceivedCheat){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.cheat_result, Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
@@ -160,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 if(mTimerOver){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.time_finish, Toast.LENGTH_SHORT);
                     toast.show();
-                }else if(mRecievedCheat){
+                }else if(mReceivedCheat){
                     Toast toast = Toast.makeText(MainActivity.this, R.string.cheat_result, Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
@@ -187,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                 setTheView(mNum);
                 c[0].cancel();
                 c[0] = setTheTimer();
-                mRecievedCheat = false;
+                mReceivedCheat = false;
                 mTrueButton.setEnabled(true);
                 mFalseButton.setEnabled(true);
             }
@@ -212,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
             if(data ==  null){
                 return;
             }
-            mRecievedCheat = CheatActivity.wasCheatShown(data);
+            mReceivedCheat = CheatActivity.wasCheatShown(data);
         }
     }
 
